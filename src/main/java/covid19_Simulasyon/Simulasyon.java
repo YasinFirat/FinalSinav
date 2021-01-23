@@ -158,10 +158,10 @@ public class Simulasyon extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_bulasmaKatsayisi, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_bulasmaKatsayisi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_iyilesmeOrani, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -291,6 +291,7 @@ public class Simulasyon extends javax.swing.JFrame {
         lb_saglikli_yuzde.setText("0");
 
         lb_hasta_yuzde.setText("0");
+        lb_hasta_yuzde.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lb_iyilesen_yuzde.setText("0");
 
@@ -299,38 +300,30 @@ public class Simulasyon extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel16))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(pnl_enfekte_olmamis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pnl_enfekte_olanlar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)))
+                        .addContainerGap()
+                        .addComponent(jLabel16))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(lb_saglikli_yuzde)
-                        .addGap(142, 142, 142)
-                        .addComponent(lb_hasta_yuzde, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(jLabel18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(pnl_iyilesen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(39, Short.MAX_VALUE))
+                            .addComponent(lb_saglikli_yuzde, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnl_enfekte_olmamis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnl_enfekte_olanlar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(lb_hasta_yuzde, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lb_iyilesen_yuzde)
-                        .addGap(65, 65, 65))))
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lb_iyilesen_yuzde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnl_iyilesen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(39, 39, 39))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,7 +337,7 @@ public class Simulasyon extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lb_saglikli_yuzde)
+                            .addComponent(lb_saglikli_yuzde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lb_hasta_yuzde, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -395,13 +388,17 @@ public class Simulasyon extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_iyilesmeOraniActionPerformed
 
+    boolean is_continue=true;
    
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
-       //Forum'dan alınan değerler aktarılır.
+      
+//Forum'dan alınan değerler aktarılır.
         int iyilesme_suresi=Integer.parseInt(txt_iyilesmeSuresi.getText().toString()); //iyilesme suresi eklendi
        int speed_simulation=Integer.parseInt(lbl_speed_simulation.getText().toString()); //simulasyon hizi eklendi
-       int mobile_hiz=Integer.parseInt(txt_mobileHiz.getText().toString()); //mobile hiz eklendi
+       int mobile_speed=Integer.parseInt(txt_mobileHiz.getText().toString()); //mobile hiz eklendi
        int population=Integer.parseInt(txt_populasyon.getText());
+        int bulasma_katsayisi=Integer.parseInt(txt_bulasmaKatsayisi.getText());
+       
        getScene().population=population; //population eklendi
        getScene().starting_total_of_patients=Integer.parseInt(txt_hasta_sayisi.getText());//hasta sayısı eklendi
        //rapor için renkler tanıtıldı her bir obje için.(scene'den çektim)
@@ -413,7 +410,7 @@ public class Simulasyon extends javax.swing.JFrame {
        getRaporOfPatient().population=population;
         getRaporOfRecovered().population=population;
         
-        
+       
 
        Thread thread_global= new Thread(new Runnable(){
            @Override
@@ -421,14 +418,16 @@ public class Simulasyon extends javax.swing.JFrame {
                int rapor_recovered=0;
                int rapor_healthy=0;
                int rapor_patient=0;
-               
+               int bulasma_katsayi_aktarma=bulasma_katsayisi;
+               bulasma_katsayi_aktarma=bulasma_katsayi_aktarma>10?10:bulasma_katsayi_aktarma;
                try {//neler olduğunu görmek için bir saniye bekletiyorum
                    Thread.sleep(1000);
                } catch (InterruptedException ex) {
                    Logger.getLogger(Simulasyon.class.getName()).log(Level.SEVERE, null, ex);
                }
-               while(true){
-                getScene().Move();//objeler hareket eder
+               while(is_continue){
+                 getScene().covidStatus(bulasma_katsayi_aktarma);
+                 getScene().Move(mobile_speed);//objeler hareket eder
                 getScene().addHuman();
                 rapor_recovered=getScene().counter_recovered;
                 rapor_healthy=getScene().counter_healthy;
@@ -437,19 +436,20 @@ public class Simulasyon extends javax.swing.JFrame {
                 getRaporOfHealthy().counter=rapor_healthy;
                 getRaporOfRecovered().counter=rapor_recovered;
                 
-                lb_hasta_yuzde.setText(rapor_patient+" Hasta");
-                lb_iyilesen_yuzde.setText(rapor_recovered+" Hasta");
-                lb_saglikli_yuzde.setText(rapor_healthy+" Hasta");
+                lb_hasta_yuzde.setText(rapor_patient+"");
+                lb_iyilesen_yuzde.setText(rapor_recovered+"");
+                lb_saglikli_yuzde.setText(rapor_healthy+"");
                 
                 if(rapor_patient<=0){
+                    is_continue=false;
                     
                 }
-                if(Math.random()*100<5){
+                if(Math.random()*100<15){
                     getScene().randomTarget();//rastgele bir hedef nokta belirler ve ilerler
                 }
-                 getScene().covidStatus();
+                 
                 try {
-                    Thread.sleep(1000/mobile_hiz);
+                    Thread.sleep(100/speed_simulation);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Simulasyon.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -462,14 +462,14 @@ public class Simulasyon extends javax.swing.JFrame {
            @Override
            public void run() {
                int gecen_gun=0;
-            while(true){
+            while(is_continue){
                 
-                getScene().treatmentControl(iyilesme_suresi);
+                getScene().treatmentControl(iyilesme_suresi,speed_simulation);
                  lbl_gecen_gun.setText(gecen_gun+"");
-                 gecen_gun++;
+                 gecen_gun+=speed_simulation;
                 
                 try {
-                    Thread.sleep(1000*speed_simulation);
+                    Thread.sleep(1000/speed_simulation);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Simulasyon.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -480,7 +480,7 @@ public class Simulasyon extends javax.swing.JFrame {
        });
      thread_global.start();
      thread_timer.start();
-      
+     
         
        
     }//GEN-LAST:event_btn_startActionPerformed

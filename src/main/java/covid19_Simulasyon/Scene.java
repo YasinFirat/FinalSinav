@@ -18,6 +18,7 @@ public class Scene extends javax.swing.JPanel {
     public int counter_patients;
     public int counter_healthy;
     public int counter_recovered;
+    
 
     public Scene() {
         this.statusPatient = new Covid19(Color.red,Color.cyan,Color.green);
@@ -36,8 +37,9 @@ public class Scene extends javax.swing.JPanel {
     }
     
     public void addHuman(){
-         int px,py,tx,ty;
+         
         for (int i = 0;human.size()<population; i++) {
+            int px,py,tx,ty;
             px=(int)(Math.random()*(this.getWidth()));
             py=(int)(Math.random()*(this.getHeight()));
             tx=(int)(Math.random()*(this.getWidth()));
@@ -51,13 +53,13 @@ public class Scene extends javax.swing.JPanel {
             }
         }
     }
-    public void treatmentControl(int time_of_treatment){
+    public void treatmentControl(int time_of_treatment,int speed_simulation){
         for (Human hum : human) {
-            hum.isPatient(time_of_treatment,Scene.this);
+            hum.isPatient(time_of_treatment,speed_simulation,Scene.this);
         }
     }
     
-    public void covidStatus(){
+    public void covidStatus(int bulasma_katsayisi){
        
         //eğer obje kırmızı ise listedeki tüm objeleri tarasın
         //sosyal mesafeye uymayanlara katsayıya göre bulaştır.
@@ -70,19 +72,19 @@ public class Scene extends javax.swing.JPanel {
                  if(human.get(j).getStatusPatient()==statusPatient.getHealthy()){ //iyileşmişse
                      pos_x=(int) Math.pow((human.get(i).px-human.get(j).px), 2);
                      pos_y=(int) Math.pow((human.get(i).py-human.get(j).py), 2);
-                     if(Math.sqrt(pos_x+pos_y)<10){
+                     if(Math.sqrt(pos_x+pos_y)<10&&(10*bulasma_katsayisi>=Math.random()*100)){
                          human.get(j).setStatusPatient();
                          counter_patients++;
                          counter_healthy--;
-                         System.out.println("p" + counter_patients);
+                        
                      }
                 }
                 
             }
         }
     }
-    public void Move(){
-        int speed=3;
+    public void Move(int speed){
+       
         int point=(int)(Math.random()*this.getWidth()/4);
         for(Human hum:human){
          
@@ -98,7 +100,7 @@ public class Scene extends javax.swing.JPanel {
     }
     public void randomTarget(){
         for(Human hum:human){
-            int speed=3;
+           
             int point=(int)(Math.random()*this.getWidth()/4);
             int tx=(int)(Math.random()*(this.getWidth()-point));
             int ty=(int)(Math.random()*(this.getHeight()-point));

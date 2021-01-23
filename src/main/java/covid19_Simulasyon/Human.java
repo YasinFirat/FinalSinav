@@ -62,10 +62,10 @@ public class Human {
               color=statusPatient.getRecovered();
               return color;
           }
-          void isPatient(int time_of_treatment,Scene s){//iyileşme süreci eğer hastaysa gün olarak artar.
+          void isPatient(int time_of_treatment,int speed_simulation,Scene s){//iyileşme süreci eğer hastaysa gün olarak artar.
               
               if(color==statusPatient.getPatient()){
-                  timer++;
+                  timer+=speed_simulation;
                   if(timer>time_of_treatment){
                       color=setStatusRecovered();
                       s.counter_recovered++;
